@@ -1,0 +1,4 @@
+*.3dobjct* filter=lfs diff=lfs merge=lfs -text
+*.3dobject* filter=lfs diff=lfs merge=lfs -text
+*.prefab* filter=lfs diff=lfs merge=lfs -text
+*.png* filter=lfs diff=lfs merge=lfs -text
