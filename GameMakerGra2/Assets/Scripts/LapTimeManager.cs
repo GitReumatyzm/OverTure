@@ -29,19 +29,18 @@ public class LapTimeManager : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other)
+{
+    if (other.gameObject == FinishLap && other == FinishLap.GetComponent<Collider>())
     {
-        if (other.gameObject == FinishLap)
-         {
-           IsLapStarted = false; 
-           float totalTime = TimeStart; 
-           TimeStart = 0; 
-           TextBox.text = totalTime.ToString("F2"); 
-           Debug.Log("Lap completed. Total time: " + totalTime); 
-        }
-        else
-        {
-            IsLapStarted = true;
-        }
+        IsLapStarted = false; 
+        float totalTime = TimeStart; 
+        TimeStart = 0; 
+        TextBox.text = totalTime.ToString("F2"); 
     }
+    else if (other.gameObject == StartLap && other == StartLap.GetComponent<Collider>())
+    {
+        IsLapStarted = true;
+    }
+}
     
 }
