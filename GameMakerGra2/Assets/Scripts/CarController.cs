@@ -12,6 +12,7 @@ public class CarController : MonoBehaviour
    private float CurrentSteerAngle;
    private float CurrentBreakForce;
    private bool IsBreaking;
+   public bool BoostForce;
 
    [SerializeField] private float MotorForce;
    [SerializeField] private float BreakForce;
@@ -45,6 +46,8 @@ public class CarController : MonoBehaviour
      {
         ApplyBreaking();
      }
+
+
    }
 
     private void ApplyBreaking()
@@ -61,6 +64,7 @@ public class CarController : MonoBehaviour
       HorizontalInput = Input.GetAxis(Horizontal);
       VerticalInput = Input.GetAxis(Vertical);
       IsBreaking = Input.GetKey(KeyCode.Space);
+      BoostForce = Input.GetKey(KeyCode.LeftShift);
     }
 
     private void HandleSteering()
@@ -86,5 +90,6 @@ public class CarController : MonoBehaviour
         WheelTransform.position = Pos;
         WheelTransform.rotation = Rot;
     }
+
 
 }
