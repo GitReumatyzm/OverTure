@@ -37,6 +37,7 @@ public class CarController : MonoBehaviour
       UpdateWheels();
    }
 
+
    private void HandleMotor()
    {
      FrontLeftWheelCollider.motorTorque = VerticalInput * MotorForce;
@@ -46,8 +47,6 @@ public class CarController : MonoBehaviour
      {
         ApplyBreaking();
      }
-
-
    }
 
     private void ApplyBreaking()
