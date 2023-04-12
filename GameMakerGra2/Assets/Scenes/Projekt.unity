@@ -234,9 +234,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeStart: 0
-  TextBox: {fileID: 115753405}
+  LapTime: {fileID: 115753405}
+  BestLapTime: {fileID: 457880418}
   StartLap: {fileID: 488468937}
   FinishLap: {fileID: 37701686}
+  Player: {fileID: 1248598966632766892}
 --- !u!1 &115753403
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,9 +928,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeStart: 0
-  TextBox: {fileID: 115753405}
+  LapTime: {fileID: 115753405}
+  BestLapTime: {fileID: 457880418}
   StartLap: {fileID: 488468937}
   FinishLap: {fileID: 37701686}
+  Player: {fileID: 1248598966632766892}
 --- !u!1 &525825721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,7 +1338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -175.5, y: -33.7}
+  m_AnchoredPosition: {x: -187.6, y: -33.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1224291254
@@ -2143,9 +2147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeStart: 0
-  TextBox: {fileID: 115753405}
+  LapTime: {fileID: 115753405}
+  BestLapTime: {fileID: 457880418}
   StartLap: {fileID: 488468937}
   FinishLap: {fileID: 37701686}
+  Player: {fileID: 0}
 --- !u!114 &1880317206854666011
 MonoBehaviour:
   m_ObjectHideFlags: 0
