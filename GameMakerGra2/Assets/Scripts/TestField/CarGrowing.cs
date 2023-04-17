@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarGrowing : MonoBehaviour
 {
@@ -26,6 +27,12 @@ public class CarGrowing : MonoBehaviour
             Debug.Log("Rozmiar: " + Player.transform.localScale);
             Player.transform.localScale /= 1.5f;
             Player.transform.localScale = ClampScale(Player.transform.localScale);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            SceneManager.LoadScene("Menu");
+            
         }
     }
 
