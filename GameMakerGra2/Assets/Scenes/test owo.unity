@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6cb2769e2ed7044bf8ef762674d2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForwardSpeed: 200
+  forwardSpeed: 200
   SphereRB: {fileID: 3694098423157974996}
 --- !u!4 &903293979
 Transform:
