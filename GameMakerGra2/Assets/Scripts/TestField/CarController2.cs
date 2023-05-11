@@ -9,18 +9,17 @@ public class CarController2 : MonoBehaviour
     private float SpeedInput;
     private float TurnInput;
 
-    public float ForwardAccel;
-    public float ReverseAccel;
-    public float MaxSpeed;
-    public float TurnStrength;
-    public float GravityForce;
-    public float GroundRayLength;
+    public float ForwardAccel = 8f;
+    public float ReverseAccel = 4f;
+    public float MaxSpeed = 50f;
+    public float TurnStrength = 180f;
+    public float GravityForce = 10f;
 
     private bool IsGrounded;
 
-    public Transform GroundRayPoint;
-
     public LayerMask WhatIsGround;
+    public float GroundRayLength = .5f;
+    public Transform GroundRayPoint;    
 
     void Start()
     {
@@ -44,20 +43,20 @@ public class CarController2 : MonoBehaviour
         if(IsGrounded)
         {
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, TurnInput * TurnStrength * Time.deltaTime * Input.GetAxis("Vertical"), 0f));
-        }
 
         transform.position = SphereRB.transform.position;
+        }
     }
 
     void FixedUpdate()
     {
-       IsGrounded = false;
-       RaycastHit Hit; 
-
-       if(Physics.Raycast(GroundRayPoint.position, transform.up, out Hit, GroundRayLength, WhatIsGround))
-       {
-          IsGrounded = true;
-       }
+        IsGrounded = false;
+        RaycastHit hit; 
+        
+        if(Physics.Raycast(GroundRayPoint.position, -transform.up, out hit, GroundRayLength, WhatIsGround))
+        {
+            IsGrounded = true;
+        }
 
         if(IsGrounded)
         {
@@ -70,5 +69,6 @@ public class CarController2 : MonoBehaviour
         {
             SphereRB.AddForce(Vector3.up * -GravityForce * 100f);
         }
+               
     }
 }
