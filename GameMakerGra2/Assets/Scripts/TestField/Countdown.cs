@@ -8,6 +8,8 @@ public class Countdown : MonoBehaviour
 {
     public float timeStart = 3;
     public GameObject Player;
+    public GameObject LapTimer;
+    public GameObject BestLapTime;
     public TMP_Text textBox;
     public Rigidbody playerRigidbody;
 
@@ -26,7 +28,7 @@ public class Countdown : MonoBehaviour
             yield return new WaitForSeconds(1f);
             timeStart--;
         }
-        textBox.text = "JEĆ!";
+        textBox.text = "JEC!";
         yield return new WaitForSeconds(1f);
         playerRigidbody.constraints = RigidbodyConstraints.None;
         textBox.gameObject.SetActive(false);
