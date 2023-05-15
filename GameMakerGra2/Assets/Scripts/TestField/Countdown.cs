@@ -9,7 +9,7 @@ public class Countdown : MonoBehaviour
     public float timeStart = 3;
     public GameObject Player;
     public TMP_Text textBox;
-    //public Rigidbody playerRigidbody;
+    public Rigidbody playerRigidbody;
 
 
     void Start() 
@@ -21,14 +21,14 @@ public class Countdown : MonoBehaviour
     {
         while (timeStart > 0)
         {
-            //playerRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            playerRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             textBox.text = Mathf.Round(timeStart).ToString();
             yield return new WaitForSeconds(1f);
             timeStart--;
         }
         textBox.text = "JEĆ!";
         yield return new WaitForSeconds(1f);
-        //playerRigidbody.constraints = RigidbodyConstraints.None;
+        playerRigidbody.constraints = RigidbodyConstraints.None;
         textBox.gameObject.SetActive(false);
     }
 }
