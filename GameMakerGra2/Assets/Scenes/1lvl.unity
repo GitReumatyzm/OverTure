@@ -3274,6 +3274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrumBRUm
       objectReference: {fileID: 0}
+    - target: {fileID: 1278145627595987034, guid: f1c338cf7be6d964abc522e780413470, type: 3}
+      propertyPath: DragOnGround
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4446474685660065507, guid: f1c338cf7be6d964abc522e780413470, type: 3}
       propertyPath: m_Enabled
       value: 0
