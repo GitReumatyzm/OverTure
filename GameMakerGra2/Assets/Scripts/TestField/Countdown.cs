@@ -8,8 +8,7 @@ public class Countdown : MonoBehaviour
 {
     public float timeStart = 3;
     public GameObject Player;
-    public GameObject LapTimer;
-    public GameObject BestLapTime;
+
     public TMP_Text textBox;
     public Rigidbody playerRigidbody;
 
