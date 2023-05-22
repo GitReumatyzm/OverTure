@@ -17,6 +17,8 @@ public class CarControlSystem : MonoBehaviour
     public float DragOnGround = 3f;
     public float GroundRayLength = .5f;
     public float MaxWheelTurn = 25f;
+    public float BoostDuration = 2f;
+    private float BoostTimer = 0f;
 
     private bool IsGrounded;
 
@@ -55,6 +57,8 @@ public class CarControlSystem : MonoBehaviour
         //RightFrontWheel.localRotation = Quaternion.Euler(RightFrontWheel.localRotation.eulerAngles.x, TurnInput * MaxWheelTurn, RightFrontWheel.localRotation.eulerAngles.z);
 
         transform.position = SphereRB.transform.position;
+
+        Nitro();
     }
 
     void FixedUpdate()
@@ -82,7 +86,32 @@ public class CarControlSystem : MonoBehaviour
         {
             SphereRB.drag = 0.1f;
             SphereRB.AddForce(Vector3.up * -GravityForce * 100f);
-        }
-               
+        }  
+    
     }
+
+    void Nitro()
+    {
+        if (Input.GetKey(KeyCode.LeftShift) && BoostTimer <= 0f)
+         {
+            BoostTimer = BoostDuration;
+         }
+
+         if (BoostTimer > 0f)
+         {
+            SpeedInput = Input.GetAxis("Vertical") * ForwardAccel * 1000f * 2f; 
+
+            BoostTimer -= Time.deltaTime;
+
+               if (BoostTimer <= 0f)
+               {
+                   SpeedInput = 0f;
+               }
+        }
+         else
+        {
+            SpeedInput = Input.GetAxis("Vertical") * ForwardAccel * 1000f;
+        }
+    }
+      
 }
