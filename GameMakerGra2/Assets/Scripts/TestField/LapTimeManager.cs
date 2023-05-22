@@ -37,7 +37,6 @@ public class LapTimeManager : MonoBehaviour
     {
         if (other.gameObject == FinishLap && other == FinishLap.GetComponent<Collider>())
         {
-            Debug.Log("UwU");
             IsLapStarted = false; 
             float totalTime = TimeStart; 
             TimeStart = 0; 
@@ -52,7 +51,6 @@ public class LapTimeManager : MonoBehaviour
         else if (other.gameObject == StartLap && other == StartLap.GetComponent<Collider>())
         {
             IsLapStarted = true;
-            Debug.Log("OwO");
         }
     }
 }
