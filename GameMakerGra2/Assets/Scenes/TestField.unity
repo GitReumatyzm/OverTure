@@ -1397,30 +1397,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrumBRUm
       objectReference: {fileID: 0}
-    - target: {fileID: 4446474685660065507, guid: f1c338cf7be6d964abc522e780413470, type: 3}
-      propertyPath: m_Size.y
-      value: 2.5725813
-      objectReference: {fileID: 0}
-    - target: {fileID: 4446474685660065507, guid: f1c338cf7be6d964abc522e780413470, type: 3}
-      propertyPath: m_Size.z
-      value: 7.504883
-      objectReference: {fileID: 0}
-    - target: {fileID: 4446474685660065507, guid: f1c338cf7be6d964abc522e780413470, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4446474685660065507, guid: f1c338cf7be6d964abc522e780413470, type: 3}
-      propertyPath: m_Center.y
-      value: 0.23963022
-      objectReference: {fileID: 0}
-    - target: {fileID: 4446474685660065507, guid: f1c338cf7be6d964abc522e780413470, type: 3}
-      propertyPath: m_Center.z
-      value: -0.2607422
-      objectReference: {fileID: 0}
-    - target: {fileID: 4446474685660065507, guid: f1c338cf7be6d964abc522e780413470, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5434182315845577761, guid: f1c338cf7be6d964abc522e780413470, type: 3}
       propertyPath: Player
       value: 
@@ -1435,20 +1411,40 @@ PrefabInstance:
       objectReference: {fileID: 377526338}
     - target: {fileID: 5990690264366499279, guid: f1c338cf7be6d964abc522e780413470, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018687144
+      value: 0.000000018687148
       objectReference: {fileID: 0}
     - target: {fileID: 5990690264366499279, guid: f1c338cf7be6d964abc522e780413470, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004567823
+      value: -0.000000004567824
       objectReference: {fileID: 0}
     - target: {fileID: 6938705090569809072, guid: f1c338cf7be6d964abc522e780413470, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018687144
+      value: 0.000000018687148
       objectReference: {fileID: 0}
     - target: {fileID: 6938705090569809072, guid: f1c338cf7be6d964abc522e780413470, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004567823
+      value: -0.000000004567824
       objectReference: {fileID: 0}
+    - target: {fileID: 7028934040562884638, guid: f1c338cf7be6d964abc522e780413470, type: 3}
+      propertyPath: textBox
+      value: 
+      objectReference: {fileID: 1441836864}
+    - target: {fileID: 7180191667569842584, guid: f1c338cf7be6d964abc522e780413470, type: 3}
+      propertyPath: LapTime
+      value: 
+      objectReference: {fileID: 115753405}
+    - target: {fileID: 7180191667569842584, guid: f1c338cf7be6d964abc522e780413470, type: 3}
+      propertyPath: StartLap
+      value: 
+      objectReference: {fileID: 488468937}
+    - target: {fileID: 7180191667569842584, guid: f1c338cf7be6d964abc522e780413470, type: 3}
+      propertyPath: FinishLap
+      value: 
+      objectReference: {fileID: 37701686}
+    - target: {fileID: 7180191667569842584, guid: f1c338cf7be6d964abc522e780413470, type: 3}
+      propertyPath: BestLapTime
+      value: 
+      objectReference: {fileID: 457880418}
     - target: {fileID: 7229745948572322736, guid: f1c338cf7be6d964abc522e780413470, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
@@ -1485,56 +1481,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1278145627595987029, guid: f1c338cf7be6d964abc522e780413470, type: 3}
   m_PrefabInstance: {fileID: 1287799217}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1287799224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87416964c4421b941a587fa8bad4efc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStart: 3
-  Player: {fileID: 1287799218}
-  textBox: {fileID: 1441836864}
-  playerRigidbody: {fileID: 377526338}
---- !u!114 &1287799229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287799218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 520017811e9ff7346a4b2a40ec207fd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeStart: 0
-  LapTime: {fileID: 115753405}
-  BestLapTime: {fileID: 457880418}
-  StartLap: {fileID: 488468937}
-  FinishLap: {fileID: 37701686}
-  Player: {fileID: 1287799218}
---- !u!54 &1287799231
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287799218}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1441836862
 GameObject:
   m_ObjectHideFlags: 0
