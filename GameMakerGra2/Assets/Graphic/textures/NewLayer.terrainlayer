@@ -6,9 +6,9 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: icecreamterrain
-  m_DiffuseTexture: {fileID: 2800000, guid: 0fff21e5978ecaa42bac8e10b13abccb, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: 600207d3690332841aa82ffc750bd206, type: 3}
+  m_Name: NewLayer
+  m_DiffuseTexture: {fileID: 2800000, guid: 40ed7b53fecdb9045819abe16f8adc47, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 97908fab6d969744e870037282e1e852, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 10, y: 10}
   m_TileOffset: {x: 0, y: 0}
