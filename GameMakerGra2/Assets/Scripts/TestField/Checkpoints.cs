@@ -10,7 +10,7 @@ public class Checkpoints : MonoBehaviour
     public GameObject Player; 
 
     public TMP_Text textBox;
-    public TMP_Text GameOverText;
+    public GameObject GameOverPanel;
     public Rigidbody playerRigidbody;
     private bool HasReachedCheckpoint = false;
     private bool IsGameOver = false;
@@ -18,7 +18,7 @@ public class Checkpoints : MonoBehaviour
     void Start()
     {
         OriginalTimeStart = timeStart;
-        GameOverText.gameObject.SetActive(false);
+        GameOverPanel.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other) 
@@ -46,7 +46,7 @@ public class Checkpoints : MonoBehaviour
         
         if (!IsGameOver)
         {
-            GameOverText.gameObject.SetActive(true);
+            GameOverPanel.gameObject.SetActive(true);
             playerRigidbody.constraints = RigidbodyConstraints.FreezeAll;
         }
 
