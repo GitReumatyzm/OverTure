@@ -9,6 +9,9 @@ public class Checkpoints : MonoBehaviour
     private float OriginalTimeStart;
     public GameObject Player; 
 
+    public List<GameObject> UIObjects = new List<GameObject>();
+
+
     public TMP_Text textBox;
     public GameObject GameOverPanel;
     public Rigidbody playerRigidbody;
@@ -17,6 +20,8 @@ public class Checkpoints : MonoBehaviour
 
     void Start()
     {
+        UIObjects = new List<GameObject>();
+
         OriginalTimeStart = timeStart;
         GameOverPanel.gameObject.SetActive(false);
     }
@@ -47,7 +52,13 @@ public class Checkpoints : MonoBehaviour
         if (!IsGameOver)
         {
             GameOverPanel.gameObject.SetActive(true);
+            
             playerRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+
+            foreach (GameObject uiObjects in UIObjects)
+            {
+                 uiObjects.SetActive(false);
+             }
         }
 
         textBox.text = "KUNIC";
