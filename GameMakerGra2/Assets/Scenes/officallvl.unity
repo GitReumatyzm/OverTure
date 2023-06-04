@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3656299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4697,7 +4697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 268e3319d5fae6440b743b194b0a85c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 146.8297
+      value: 158.34
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 268e3319d5fae6440b743b194b0a85c2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9751,6 +9751,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3656298}
     - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
+      propertyPath: GameOverHighscore
+      value: 
+      objectReference: {fileID: 2073637603}
+    - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: UIObjects.Array.data[0]
       value: 
       objectReference: {fileID: 277099286}
@@ -9830,6 +9834,10 @@ PrefabInstance:
       propertyPath: BestLapTime
       value: 
       objectReference: {fileID: 925111505}
+    - target: {fileID: 7541244610342724012, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
+      propertyPath: playerRigidbody
+      value: 
+      objectReference: {fileID: 2084224044}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
 --- !u!1001 &1857300741
@@ -11078,7 +11086,7 @@ GameObject:
   - component: {fileID: 2073637604}
   - component: {fileID: 2073637603}
   m_Layer: 5
-  m_Name: HighScoreDisplay
+  m_Name: GameOverHighScoreDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11346,6 +11354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+--- !u!54 &2084224044 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 272793603605129681, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
+  m_PrefabInstance: {fileID: 1837900372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2090032426
 PrefabInstance:
   m_ObjectHideFlags: 0

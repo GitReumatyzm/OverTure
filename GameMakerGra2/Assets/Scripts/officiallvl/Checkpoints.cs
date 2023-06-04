@@ -7,10 +7,10 @@ public class Checkpoints : MonoBehaviour
 {
     public float timeStart = 5;
     private float OriginalTimeStart;
-    public GameObject Player; 
+    public GameObject Player;
+    public TMP_Text GameOverHighscore;
 
     public List<GameObject> UIObjects = new List<GameObject>();
-
 
     public TMP_Text textBox;
     public GameObject GameOverPanel;
@@ -18,14 +18,18 @@ public class Checkpoints : MonoBehaviour
     private bool HasReachedCheckpoint = false;
     private bool IsGameOver = false;
 
+    private LapTimeManager lapTimeManager;
+
     void Start()
     {
-
         OriginalTimeStart = timeStart;
         GameOverPanel.gameObject.SetActive(false);
+
+        lapTimeManager = Player.GetComponent<LapTimeManager>();
+        GameOverHighscore.text = lapTimeManager.BestLapTime.text;
     }
 
-    void OnTriggerEnter(Collider other) 
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Checkpoint") && !HasReachedCheckpoint)
         {
@@ -35,7 +39,6 @@ public class Checkpoints : MonoBehaviour
         else if (other.gameObject.CompareTag("Checkpoint") && HasReachedCheckpoint)
         {
             timeStart = OriginalTimeStart + 1;
-            //playerRigidbody.constraints = RigidbodyConstraints.None;
         }
     }
 
@@ -47,21 +50,31 @@ public class Checkpoints : MonoBehaviour
             yield return new WaitForSeconds(1f);
             timeStart--;
         }
-        
+
         if (!IsGameOver)
         {
             GameOverPanel.gameObject.SetActive(true);
-            
-            playerRigidbody.constraints = RigidbodyConstraints.FreezeAll;
 
-            foreach (GameObject uiObjects in UIObjects)
+            playerRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            lapTimeManager.IsLapStarted = false;
+
+            //foreach (GameObject uiObjects in UIObjects)
+            //{
+                //uiObjects.SetActive(false);
+            //}
+
+            float totalTime = lapTimeManager.TimeStart;
+            lapTimeManager.TimeStart = 0;
+            lapTimeManager.LapTime.text = totalTime.ToString("F2");
+
+            if (totalTime < PlayerPrefs.GetFloat("BestLapTime", 0f) || PlayerPrefs.GetFloat("BestLapTime", 0f) == 0f)
             {
-                 uiObjects.SetActive(false);
-             }
+                PlayerPrefs.SetFloat("BestLapTime", totalTime);
+                lapTimeManager.BestLapTime.text = PlayerPrefs.GetFloat("BestLapTime", 0f).ToString("F2");
+            }
         }
 
         textBox.text = "KUNIC";
-        playerRigidbody.constraints = RigidbodyConstraints.None;
         yield return new WaitForSeconds(1f);
         textBox.gameObject.SetActive(false);
         timeStart = OriginalTimeStart;
