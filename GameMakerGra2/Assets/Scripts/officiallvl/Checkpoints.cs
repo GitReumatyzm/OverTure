@@ -20,7 +20,6 @@ public class Checkpoints : MonoBehaviour
 
     void Start()
     {
-        UIObjects = new List<GameObject>();
 
         OriginalTimeStart = timeStart;
         GameOverPanel.gameObject.SetActive(false);
