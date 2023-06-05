@@ -9704,15 +9704,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 272793602477803291, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.018226529
+      value: -0.018226508
       objectReference: {fileID: 0}
     - target: {fileID: 272793602477803291, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0011476964
+      value: -0.0011477309
       objectReference: {fileID: 0}
     - target: {fileID: 272793602477803291, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000020922007
+      value: -0.000020922611
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9728,15 +9728,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.018226529
+      value: -0.018226508
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0011476964
+      value: -0.0011477309
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000020922007
+      value: -0.000020922611
       objectReference: {fileID: 0}
     - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: textBox
@@ -9750,6 +9750,10 @@ PrefabInstance:
       propertyPath: GameOverPanel
       value: 
       objectReference: {fileID: 3656298}
+    - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
+      propertyPath: lapTimeManager
+      value: 
+      objectReference: {fileID: 1837900373}
     - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: GameOverHighscore
       value: 
@@ -9838,8 +9842,23 @@ PrefabInstance:
       propertyPath: playerRigidbody
       value: 
       objectReference: {fileID: 2084224044}
+    - target: {fileID: 7541244610342724012, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
+      propertyPath: GameOverHighscore
+      value: 
+      objectReference: {fileID: 2073637603}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
+--- !u!114 &1837900373 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7541244610342724012, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
+  m_PrefabInstance: {fileID: 1837900372}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520017811e9ff7346a4b2a40ec207fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1857300741
 PrefabInstance:
   m_ObjectHideFlags: 0

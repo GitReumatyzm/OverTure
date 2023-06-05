@@ -8,7 +8,6 @@ public class Checkpoints : MonoBehaviour
     public float timeStart = 5;
     private float OriginalTimeStart;
     public GameObject Player;
-    public TMP_Text GameOverHighscore;
 
     public List<GameObject> UIObjects = new List<GameObject>();
 
@@ -18,15 +17,12 @@ public class Checkpoints : MonoBehaviour
     private bool HasReachedCheckpoint = false;
     private bool IsGameOver = false;
 
-    private LapTimeManager lapTimeManager;
+    public LapTimeManager lapTimeManager;
 
     void Start()
     {
         OriginalTimeStart = timeStart;
         GameOverPanel.gameObject.SetActive(false);
-
-        lapTimeManager = Player.GetComponent<LapTimeManager>();
-        GameOverHighscore.text = lapTimeManager.BestLapTime.text;
     }
 
     void OnTriggerEnter(Collider other)

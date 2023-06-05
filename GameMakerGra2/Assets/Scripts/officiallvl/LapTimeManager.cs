@@ -24,7 +24,9 @@ public class LapTimeManager : MonoBehaviour
     {
         LapTime.text = TimeStart.ToString("F2");
         BestLapTime.text = PlayerPrefs.GetFloat("BestLapTime", 0f).ToString("0.00");
+        GameOverHighscore.text = BestLapTime.text;
         PlayerPrefs.DeleteKey("BestLapTime");
+        BestLapTime.text = "0.00";
     }
 
     void Update()
@@ -49,6 +51,7 @@ public class LapTimeManager : MonoBehaviour
             {
                 PlayerPrefs.SetFloat("BestLapTime", totalTime);
                 BestLapTime.text = (PlayerPrefs.GetFloat("BestLapTime", 0f) == 0f) ? "0.00" : PlayerPrefs.GetFloat("BestLapTime", 0f).ToString("F2");
+                GameOverHighscore.text = BestLapTime.text;
             }
         }
         else if (other.gameObject == StartLap && other == StartLap.GetComponent<Collider>())
