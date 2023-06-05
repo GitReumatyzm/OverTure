@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 3656301}
   - component: {fileID: 3656300}
   - component: {fileID: 3656302}
+  - component: {fileID: 3656303}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
@@ -149,7 +150,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3656298}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -215,6 +216,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb5b54a676d1fa4190d6916e722c6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3656303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656298}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520017811e9ff7346a4b2a40ec207fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeStart: 0
+  LapTime: {fileID: 277099288}
+  BestLapTime: {fileID: 925111505}
+  GameOverHighscore: {fileID: 2073637603}
+  StartLap: {fileID: 1369625738}
+  FinishLap: {fileID: 327432040}
+  Player: {fileID: 1205121276}
+  playerRigidbody: {fileID: 2084224044}
+  IsLapStarted: 0
 --- !u!1001 &13332472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -266,6 +288,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (55)
@@ -323,6 +353,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (52)
@@ -749,6 +787,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (13)
@@ -806,6 +852,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (58)
@@ -1127,6 +1181,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (50)
@@ -1319,6 +1381,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: trees
@@ -1381,6 +1451,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (10)
@@ -2476,6 +2554,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (6)
@@ -2837,6 +2923,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko
@@ -2894,6 +2988,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (11)
@@ -3274,6 +3376,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (2)
@@ -3683,6 +3793,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (56)
@@ -3828,6 +3946,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (1)
@@ -5209,6 +5335,7 @@ GameObject:
   - component: {fileID: 1133899061}
   - component: {fileID: 1133899063}
   - component: {fileID: 1133899062}
+  - component: {fileID: 1133899064}
   m_Layer: 5
   m_Name: CheckpointTImer
   m_TagString: Untagged
@@ -5333,6 +5460,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133899060}
   m_CullTransparentMesh: 1
+--- !u!114 &1133899064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133899060}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520017811e9ff7346a4b2a40ec207fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeStart: 0
+  LapTime: {fileID: 277099288}
+  BestLapTime: {fileID: 925111505}
+  GameOverHighscore: {fileID: 2073637603}
+  StartLap: {fileID: 1369625738}
+  FinishLap: {fileID: 327432040}
+  Player: {fileID: 1205121276}
+  playerRigidbody: {fileID: 2084224044}
+  IsLapStarted: 0
 --- !u!1001 &1160838185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6446,6 +6594,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (4)
@@ -6503,6 +6659,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (61)
@@ -6929,6 +7093,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (12)
@@ -6986,6 +7158,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (59)
@@ -7139,6 +7319,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (53)
@@ -7196,6 +7384,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (8)
@@ -7429,6 +7625,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (62)
@@ -7583,6 +7787,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (3)
@@ -7640,6 +7852,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (57)
@@ -8703,6 +8923,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (54)
@@ -9263,6 +9491,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko
@@ -9543,6 +9779,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (60)
@@ -9600,6 +9844,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (14)
@@ -9709,15 +9961,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 272793602477803291, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.018226508
+      value: -0.018226529
       objectReference: {fileID: 0}
     - target: {fileID: 272793602477803291, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0011477309
+      value: -0.0011476964
       objectReference: {fileID: 0}
     - target: {fileID: 272793602477803291, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000020922611
+      value: -0.000020922007
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9733,15 +9985,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.018226508
+      value: -0.018226529
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0011477309
+      value: -0.0011476964
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000020922611
+      value: -0.000020922007
       objectReference: {fileID: 0}
     - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: textBox
@@ -9749,7 +10001,7 @@ PrefabInstance:
       objectReference: {fileID: 1133899062}
     - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: timeStart
@@ -9853,7 +10105,7 @@ PrefabInstance:
       objectReference: {fileID: 2073637603}
     - target: {fileID: 7541244610342724012, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7541244610342724012, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: BestLapTime
@@ -9875,35 +10127,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1837900372}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205121276}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 520017811e9ff7346a4b2a40ec207fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1837900380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205121276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f526636fe1f433469f62a775ab711a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeStart: 5
-  Player: {fileID: 1205121276}
-  UIObjects: []
-  textBox: {fileID: 1133899062}
-  GameOverPanel: {fileID: 3656298}
-  playerRigidbody: {fileID: 2084224044}
-  LapTime: {fileID: 277099288}
-  BestLapTime: {fileID: 925111505}
-  GameOverHighscore: {fileID: 2073637603}
-  StartLap: {fileID: 1369625738}
-  FinishLap: {fileID: 327432040}
-  IsLapStarted: 0
 --- !u!1001 &1857300741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10483,6 +10711,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (63)
@@ -11412,6 +11648,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: b4208c07b4fc5014db79a8e01789843e, type: 3}
       propertyPath: m_Name
       value: drzewko (51)
@@ -11650,6 +11894,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4587302668392987624, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8258f30395d9bb243a6f37e4cd3d73ff, type: 2}
+    - target: {fileID: -2571118854743697038, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0960db860ddb41a4eb683e73a6a78bd6, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d2b044704ded114bb94d292c15ca809, type: 3}
       propertyPath: m_Name
       value: drzewko (7)
