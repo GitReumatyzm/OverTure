@@ -21,17 +21,22 @@ public class CarControlSystem : MonoBehaviour
     private float BoostTimer = 0f;
 
     private bool IsGrounded;
+    private bool IsEngineRunning;
 
     public LayerMask WhatIsGround;
 
     public Transform GroundRayPoint;
     public Transform LeftFrontWheel;
     public Transform RightFrontWheel;
+
+    public AudioSource EngineStarting;
+    public AudioSource EngineRunning;
     
 
     void Start()
     {
         SphereRB.transform.parent = null;
+        EngineStarting.Play();
     }
 
     void Update()
@@ -40,10 +45,17 @@ public class CarControlSystem : MonoBehaviour
         if(Input.GetAxis("Vertical") > 0)
         {
             SpeedInput = Input.GetAxis("Vertical") * ForwardAccel * 1000f;
+            IsEngineRunning = true;
+            
         }
         else if(Input.GetAxis("Vertical") < 0)
         {
             SpeedInput = Input.GetAxis("Vertical") * ForwardAccel * 1000f;
+            IsEngineRunning = true;
+        }
+        else
+        {
+            IsEngineRunning = false;
         }
 
         TurnInput = Input.GetAxis("Horizontal");
@@ -112,6 +124,24 @@ public class CarControlSystem : MonoBehaviour
         {
             SpeedInput = Input.GetAxis("Vertical") * ForwardAccel * 1000f;
         }
+    }
+    
+    void LateUpdate()
+    {
+         {
+        if (IsEngineRunning)
+        {
+            if (!EngineRunning.isPlaying)
+            {
+                EngineRunning.Play();
+            }
+        }
+        else
+        {
+            EngineRunning.Stop();
+        }
+        }
+
     }
       
 }
