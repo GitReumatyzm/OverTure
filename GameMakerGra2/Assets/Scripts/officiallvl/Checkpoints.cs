@@ -6,7 +6,7 @@ using TMPro;
 public class Checkpoints : MonoBehaviour
 {
     public float timeStart = 5;
-    private float OriginalTimeStart;
+    private float originalTimeStart;
     public GameObject Player;
 
     public List<GameObject> UIObjects = new List<GameObject>();
@@ -14,27 +14,32 @@ public class Checkpoints : MonoBehaviour
     public TMP_Text textBox;
     public GameObject GameOverPanel;
     public Rigidbody playerRigidbody;
-    private bool HasReachedCheckpoint = false;
-    private bool IsGameOver = false;
+    private bool hasReachedCheckpoint = false;
+    private bool isRaceFinished = false;
 
     public LapTimeManager lapTimeManager;
 
     void Start()
     {
-        OriginalTimeStart = timeStart;
+        originalTimeStart = timeStart;
         GameOverPanel.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Checkpoint") && !HasReachedCheckpoint)
+        if (other.gameObject.CompareTag("Checkpoint") && !hasReachedCheckpoint && !isRaceFinished)
         {
             StartCoroutine(CheckPointCountdownCoroutine());
-            HasReachedCheckpoint = true;
+            hasReachedCheckpoint = true;
         }
-        else if (other.gameObject.CompareTag("Checkpoint") && HasReachedCheckpoint)
+        else if (other.gameObject.CompareTag("Checkpoint") && hasReachedCheckpoint && !isRaceFinished)
         {
-            timeStart = OriginalTimeStart + 1;
+            timeStart = originalTimeStart + 1;
+        }
+        else if (other.gameObject.CompareTag("FinishLine") && !isRaceFinished)
+        {
+            isRaceFinished = true;
+            lapTimeManager.IsLapStarted = false;
         }
     }
 
@@ -47,7 +52,7 @@ public class Checkpoints : MonoBehaviour
             timeStart--;
         }
 
-        if (!IsGameOver)
+        if (!isRaceFinished)
         {
             GameOverPanel.gameObject.SetActive(true);
 
@@ -62,15 +67,14 @@ public class Checkpoints : MonoBehaviour
             {
                 PlayerPrefs.SetFloat("BestLapTime", totalTime);
                 lapTimeManager.BestLapTime.text = PlayerPrefs.GetFloat("BestLapTime", 0f).ToString("F2");
-                lapTimeManager.GameOverHighscore.text = PlayerPrefs.GetFloat("BestLapTime", 0f).ToString("F2");
             }
         }
 
         textBox.text = "KUNIC";
         yield return new WaitForSeconds(1f);
         textBox.gameObject.SetActive(false);
-        timeStart = OriginalTimeStart;
-        HasReachedCheckpoint = false;
-        IsGameOver = false;
+        timeStart = originalTimeStart;
+        hasReachedCheckpoint = false;
+        isRaceFinished = false;
     }
 }
