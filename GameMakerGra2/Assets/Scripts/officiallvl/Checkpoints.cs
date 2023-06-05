@@ -54,11 +54,6 @@ public class Checkpoints : MonoBehaviour
             playerRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             lapTimeManager.IsLapStarted = false;
 
-            //foreach (GameObject uiObjects in UIObjects)
-            //{
-                //uiObjects.SetActive(false);
-            //}
-
             float totalTime = lapTimeManager.TimeStart;
             lapTimeManager.TimeStart = 0;
             lapTimeManager.LapTime.text = totalTime.ToString("F2");
@@ -67,6 +62,7 @@ public class Checkpoints : MonoBehaviour
             {
                 PlayerPrefs.SetFloat("BestLapTime", totalTime);
                 lapTimeManager.BestLapTime.text = PlayerPrefs.GetFloat("BestLapTime", 0f).ToString("F2");
+                lapTimeManager.GameOverHighscore.text = PlayerPrefs.GetFloat("BestLapTime", 0f).ToString("F2");
             }
         }
 

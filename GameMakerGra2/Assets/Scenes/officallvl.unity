@@ -9704,15 +9704,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 272793602477803291, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.018226508
+      value: -0.018226529
       objectReference: {fileID: 0}
     - target: {fileID: 272793602477803291, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0011477309
+      value: -0.0011476964
       objectReference: {fileID: 0}
     - target: {fileID: 272793602477803291, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000020922611
+      value: -0.000020922007
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9728,20 +9728,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.018226508
+      value: -0.018226529
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0011477309
+      value: -0.0011476964
       objectReference: {fileID: 0}
     - target: {fileID: 272793603662165576, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000020922611
+      value: -0.000020922007
       objectReference: {fileID: 0}
     - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: textBox
       value: 
       objectReference: {fileID: 1133899062}
+    - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
+      propertyPath: timeStart
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3665210632467675445, guid: 3a8f0ff78d0b88b4c831e1ebb848753f, type: 3}
       propertyPath: GameOverText
       value: 
