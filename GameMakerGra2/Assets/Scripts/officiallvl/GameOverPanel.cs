@@ -7,11 +7,11 @@ public class GameOverPanel : MonoBehaviour
 {
    public void ResetLvl()
    {
-     SceneManager.LoadScene(3);
+     SceneManager.LoadScene(1);
    }
 
    public void GoBack()
    {
-      SceneManager.LoadScene(1);
+      SceneManager.LoadScene(0);
    }
 }
