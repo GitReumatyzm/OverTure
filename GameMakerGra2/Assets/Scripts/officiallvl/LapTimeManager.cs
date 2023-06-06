@@ -10,29 +10,29 @@ public class LapTimeManager : MonoBehaviour
 
     public TMP_Text LapTime;
     public TMP_Text BestLapTime;
-    public TMP_Text GameOverHighscore;
 
     public GameObject StartLap;
     public GameObject FinishLap;
     public GameObject Player;
+    public GameObject RaceCompleted;
 
-    public Rigidbody playerRigidbody;
+    private Checkpoints checkpoints;
+    private Coroutine checkPointCoroutine;
 
     public bool IsLapStarted = false;
 
-    private float checkpointTime;
-    private bool isGameOverHighscoreSaved = false;
-
     void Start()
     {
+        RaceCompleted.SetActive(false);
+        checkpoints = Player.GetComponent<Checkpoints>();
         LapTime.text = TimeStart.ToString("F2");
         BestLapTime.text = PlayerPrefs.GetFloat("BestLapTime", 0f).ToString("0.00");
-        GameOverHighscore.text = BestLapTime.text;
+        PlayerPrefs.DeleteKey("BestLapTime");
     }
 
     void Update()
     {
-        if (IsLapStarted)
+        if(IsLapStarted == true)
         {
             TimeStart += Time.deltaTime;
             LapTime.text = TimeStart.ToString("F2");
@@ -43,37 +43,23 @@ public class LapTimeManager : MonoBehaviour
     {
         if (other.gameObject == FinishLap && other == FinishLap.GetComponent<Collider>())
         {
-            IsLapStarted = false;
-
-            float totalTime = TimeStart;
-            TimeStart = 0;
-            LapTime.text = totalTime.ToString("F2");
+            IsLapStarted = false; 
+            float totalTime = TimeStart; 
+            TimeStart = 0; 
+            LapTime.text = totalTime.ToString("F2"); 
+            RaceCompleted.SetActive(true);
 
             if (totalTime < PlayerPrefs.GetFloat("BestLapTime", 0f) || PlayerPrefs.GetFloat("BestLapTime", 0f) == 0f)
             {
                 PlayerPrefs.SetFloat("BestLapTime", totalTime);
-                BestLapTime.text = PlayerPrefs.GetFloat("BestLapTime", 0f).ToString("F2");
+                BestLapTime.text = (PlayerPrefs.GetFloat("BestLapTime", 0f) == 0f) ? "0.00" : PlayerPrefs.GetFloat("BestLapTime", 0f).ToString("F2");
             }
+
         }
         else if (other.gameObject == StartLap && other == StartLap.GetComponent<Collider>())
         {
             IsLapStarted = true;
-        }
-        else if (other.gameObject.CompareTag("Checkpoint"))
-        {
-            if (IsLapStarted && !isGameOverHighscoreSaved)
-            {
-                checkpointTime = TimeStart;
-                isGameOverHighscoreSaved = true;
-            }
-        }
+          
     }
-
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Checkpoint"))
-        {
-            isGameOverHighscoreSaved = false;
-        }
-    }
+}
 }
